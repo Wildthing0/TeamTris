@@ -117,9 +117,29 @@ T = [['.....',
       '.00..',
       '..0..',
       '.....']]
+D = [['.....',
+      '..0..',
+      '..0..',
+      '.000.',
+      '.....'],
+     ['.....',
+      '.0...',
+      '.000.',
+      '.0...',
+      '.....'],
+     ['.....',
+      '.000.',
+      '..0..',
+      '..0..',
+      '.....'],
+     ['.....',
+      '...0.',
+      '.000.',
+      '...0.',
+      '.....']]
 
-shapes = [S, Z, I, O, J, L, T]
-shape_colors = [(0, 200, 0), (200, 0, 0), (0, 200, 200), (200, 200, 0), (200, 165, 0), (0, 0, 200), (128, 0, 128)]
+shapes = [S, Z, I, O, J, L, T, D]
+shape_colors = [(0, 200, 0), (200, 0, 0), (0, 200, 200), (200, 200, 0), (200, 165, 0), (0, 0, 200), (128, 0, 128),(127, 127, 127)]
 # index 0 - 6 represent shape
 
 
@@ -182,7 +202,7 @@ def check_lost(positions):
 
 
 def get_shape():
-    return Piece(5, 0, random.choice(shapes))
+    return Piece(6, 0, random.choice(shapes))
 
 
 def draw_text_middle(surface, text, size, color):
@@ -238,7 +258,7 @@ def draw_next_shape(shape, surface):
         row = list(line)
         for j, column in enumerate(row):
             if column == '0':
-                pygame.draw.rect(surface, shape.color, (sx + j*block_size, sy + i*block_size, block_size, block_size), 0)
+                pygame.draw.rect(surface, shape.color, (sx + j*block_size, sy + i*block_size, block_size-2, block_size-2), 0)
 
     surface.blit(label, (sx + 10, sy - 30))
 
@@ -266,19 +286,19 @@ def draw_window(surface, grid, score=0, last_score = 0):
 
     pygame.font.init()
     font = pygame.font.SysFont('comicsans', 60)
-    label = font.render('Tetris', 1, (255, 255, 255))
+    label = font.render('TeamTris', 1, (255, 255, 255))
 
-    surface.blit(label, (top_left_x + play_width / 2 - (label.get_width() / 2), 30))
+    surface.blit(label, (top_left_x + play_width / 2 - (label.get_width() / 2), 20))
 
     # current score
-    font = pygame.font.SysFont('comicsans', 30)
+    font = pygame.font.SysFont('comicsans', 25)
     label = font.render('Score: ' + str(score), 1, (255,255,255))
 
     sx = top_left_x + play_width + 50
     sy = top_left_y + play_height/2 - 100
 
     surface.blit(label, (sx + 20, sy + 160))
-    # last score
+    # high score
     label = font.render('High Score: ' + last_score, 1, (255,255,255))
 
     sx = top_left_x - 200
@@ -293,7 +313,7 @@ def draw_window(surface, grid, score=0, last_score = 0):
     pygame.draw.rect(surface, (255, 0, 0), (top_left_x, top_left_y, play_width, play_height), 5)
 
     draw_grid(surface, grid)
-    #pygame.display.update()
+    # pygame.display.update()
 
 
 def main(win):  # *
@@ -375,7 +395,7 @@ def main(win):  # *
         if check_lost(locked_positions):
             draw_text_middle(win, "YOU LOST!", 80, (255,255,255))
             pygame.display.update()
-            pygame.time.delay(1500)
+            pygame.time.delay(5000)
             run = False
             update_score(score)
 
