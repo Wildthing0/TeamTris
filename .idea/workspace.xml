@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e137cf6-8226-4a5d-b665-585cdf0feea7" name="Changes" comment="Made font better">
+    <list default="true" id="2e137cf6-8226-4a5d-b665-585cdf0feea7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scores.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666647911016</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Made window title 'TeamTris' instead of 'Tetris'">
+      <created>1666651885691</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666651885691</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +103,7 @@
     <MESSAGE value="Added D piece, made title in correct position, made high score and score smaller to fit larger scores on the screen" />
     <MESSAGE value="Removed D piece" />
     <MESSAGE value="Made font better" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made font better" />
+    <MESSAGE value="Made window title 'TeamTris' instead of 'Tetris'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made window title 'TeamTris' instead of 'Tetris'" />
   </component>
 </project>

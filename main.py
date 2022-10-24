@@ -38,16 +38,16 @@ Z = [['.....',
       '.0...',
       '.....']]
 
-I = [['..0..',
-      '..0..',
-      '..0..',
-      '..0..',
-      '.....'],
-     ['.....',
+I = [['.....',
+      '.....',
       '0000.',
       '.....',
-      '.....',
-      '.....']]
+      '.....'],
+     ['.....',
+      '..0..',
+      '..0..',
+      '..0..',
+      '..0..']]
 
 O = [['.....',
       '.....',
@@ -308,7 +308,8 @@ def main(win):  # *
     next_piece = get_shape()
     clock = pygame.time.Clock()
     fall_time = 0
-    fall_speed = 0.27
+    start_fall_speed = 0.35
+    fall_speed = 0.35
     level_time = 0
     score = 0
 
@@ -368,6 +369,8 @@ def main(win):  # *
             next_piece = get_shape()
             change_piece = False
             score += clear_rows(grid, locked_positions) * 10
+            if score > 200:
+                fall_speed = start_fall_speed/(score/200)
 
         draw_window(win, grid, score, last_score)
         draw_next_shape(next_piece, win)
@@ -394,7 +397,6 @@ def main_menu(win):  # *
                 main(win)
 
     pygame.display.quit()
-
 
 win = pygame.display.set_mode((s_width, s_height))
 pygame.display.set_caption('TeamTris')
