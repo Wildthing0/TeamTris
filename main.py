@@ -4,11 +4,11 @@ import random
 pygame.font.init()
 
 # GLOBALS VARS
-s_width = 800
-s_height = 700
-play_width = 300  # meaning 300 // 10 = 30 width per block
-play_height = 600  # meaning 600 // 20 = 30 height per block
-block_size = 30
+s_width = 720
+s_height = 630
+play_width = 270  # meaning 300 // 10 = 30 width per block
+play_height = 540  # meaning 600 // 20 = 30 height per block
+block_size = 27
 
 top_left_x = (s_width - play_width) // 2
 top_left_y = s_height - play_height
@@ -284,7 +284,7 @@ def draw_window(surface, grid, score=0, last_score = 0):
     sx = top_left_x - 200
     sy = top_left_y + 200
 
-    surface.blit(label, (sx + 20, sy + 160))
+    surface.blit(label, (sx - 20, sy + 160))
 
     for i in range(len(grid)):
         for j in range(len(grid[i])):
