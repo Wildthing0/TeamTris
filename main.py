@@ -180,18 +180,18 @@ def check_lost(positions):
 
     return False
 
-
+#random shape generator
 def get_shape():
     return Piece(5, 0, random.choice(shapes))
 
 
 def draw_text_middle(surface, text, size, color):
-    font = pygame.font.SysFont("impact", size, bold=True)
+    font = pygame.font.SysFont("impact", size, bold=False)
     label = font.render(text, 1, color)
 
     surface.blit(label, (top_left_x + play_width /2 - (label.get_width()/2), top_left_y + play_height/2 - label.get_height()/2))
 
-
+#Grid
 def draw_grid(surface, grid):
     sx = top_left_x
     sy = top_left_y
@@ -225,7 +225,7 @@ def clear_rows(grid, locked):
 
     return inc
 
-
+#Change: Move next shape icon to left of board
 def draw_next_shape(shape, surface):
     font = pygame.font.SysFont('impact', 30)
     label = font.render('Next Shape', 1, (255,255,255))
