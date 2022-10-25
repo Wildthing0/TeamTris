@@ -133,12 +133,12 @@ class Piece(object):  # *
 
 
 def create_grid(locked_pos={}):  # *
-    grid = [[(0,0,0) for _ in range(10)] for _ in range(20)]
+    grid = [[(0, 0, 0) for _ in range(10)] for _ in range(20)]
 
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if (j, i) in locked_pos:
-                c = locked_pos[(j,i)]
+                c = locked_pos[(j, i)]
                 grid[i][j] = c
     return grid
 
@@ -160,7 +160,7 @@ def convert_shape_format(shape):
 
 
 def valid_space(shape, grid):
-    accepted_pos = [[(j, i) for j in range(10) if grid[i][j] == (0,0,0)] for i in range(20)]
+    accepted_pos = [[(j, i) for j in range(10) if grid[i][j] == (0, 0, 0)] for i in range(20)]
     accepted_pos = [j for sub in accepted_pos for j in sub]
 
     formatted = convert_shape_format(shape)
@@ -353,6 +353,11 @@ def main(win):  # *
                     current_piece.rotation += 1
                     if not(valid_space(current_piece, grid)):
                         current_piece.rotation -= 1
+                if event.key == pygame.K_SPACE:
+                    for i in range(20):
+                        current_piece.y+=1
+                        if not(valid_space(current_piece, grid)):
+                            current_piece.y -= 1
 
         shape_pos = convert_shape_format(current_piece)
 
@@ -377,7 +382,7 @@ def main(win):  # *
         pygame.display.update()
 
         if check_lost(locked_positions):
-            draw_text_middle(win, "YOU LOST!", 80, (255,255,255))
+            draw_text_middle(win, "YOU LOST!", 80, (255, 255, 255))
             pygame.display.update()
             pygame.time.delay(5000)
             run = False
@@ -387,8 +392,8 @@ def main(win):  # *
 def main_menu(win):  # *
     run = True
     while run:
-        win.fill((0,0,0))
-        draw_text_middle(win, 'Press Any Key To Play', 60, (255,255,255))
+        win.fill((0, 0, 0))
+        draw_text_middle(win, 'Press Any Key To Play', 60, (255, 255, 255))
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

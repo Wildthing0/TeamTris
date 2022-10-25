@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e137cf6-8226-4a5d-b665-585cdf0feea7" name="Changes" comment="">
+    <list default="true" id="2e137cf6-8226-4a5d-b665-585cdf0feea7" name="Changes" comment="Made Blocks start to fall faster at 200 points (20 lines) fall_speed = starting_speed/(score/200) which means that 400 points is double speed 600 is triple and everything in between">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scores.txt" afterDir="false" />
+    </list>
+    <list id="a4e38bd9-26bb-4a50-b9ef-fc105db799fd" name="Changes by varda" comment="">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +16,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/main.py">
+      <ranges>
+        <range start1="135" end1="136" start2="135" end2="136" changelist="2e137cf6-8226-4a5d-b665-585cdf0feea7" />
+        <range start1="140" end1="141" start2="140" end2="141" changelist="2e137cf6-8226-4a5d-b665-585cdf0feea7" />
+        <range start1="162" end1="163" start2="162" end2="163" changelist="2e137cf6-8226-4a5d-b665-585cdf0feea7" />
+        <range start1="182" end1="183" start2="182" end2="183" changelist="a4e38bd9-26bb-4a50-b9ef-fc105db799fd" />
+        <range start1="193" end1="194" start2="193" end2="194" changelist="a4e38bd9-26bb-4a50-b9ef-fc105db799fd" />
+        <range start1="227" end1="228" start2="227" end2="228" changelist="a4e38bd9-26bb-4a50-b9ef-fc105db799fd" />
+        <range start1="355" end1="355" start2="355" end2="360" changelist="2e137cf6-8226-4a5d-b665-585cdf0feea7" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666651885691</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Made Blocks start to fall faster at 200 points (20 lines) fall_speed = starting_speed/(score/200) which means that 400 points is double speed 600 is triple and everything in between">
+      <created>1666654212100</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666654212100</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +127,7 @@
     <MESSAGE value="Removed D piece" />
     <MESSAGE value="Made font better" />
     <MESSAGE value="Made window title 'TeamTris' instead of 'Tetris'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made window title 'TeamTris' instead of 'Tetris'" />
+    <MESSAGE value="Made Blocks start to fall faster at 200 points (20 lines) fall_speed = starting_speed/(score/200) which means that 400 points is double speed 600 is triple and everything in between" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Blocks start to fall faster at 200 points (20 lines) fall_speed = starting_speed/(score/200) which means that 400 points is double speed 600 is triple and everything in between" />
   </component>
 </project>
