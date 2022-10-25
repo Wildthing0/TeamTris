@@ -4,10 +4,10 @@ import random
 pygame.font.init()
 
 # GLOBALS VARS
-s_width = 720
+s_width = 1000
 s_height = 630
-play_width = 270  # meaning 300 // 10 = 30 width per block
-play_height = 540  # meaning 600 // 20 = 30 height per block
+play_width = 270  # meaning 270 // 10 = 27 width per block
+play_height = 540  # meaning 540 // 20 = 27 height per block
 block_size = 27
 
 top_left_x = (s_width - play_width) // 2
@@ -230,15 +230,15 @@ def draw_next_shape(shape, surface):
     font = pygame.font.SysFont('impact', 30)
     label = font.render('Next Shape', 1, (255,255,255))
 
-    sx = top_left_x + play_width + 50
-    sy = top_left_y + play_height/2 - 100
+    sx = 850
+    sy = 150
     format = shape.shape[shape.rotation % len(shape.shape)]
 
     for i, line in enumerate(format):
         row = list(line)
         for j, column in enumerate(row):
             if column == '0':
-                pygame.draw.rect(surface, shape.color, (sx + j*block_size, sy + i*block_size, block_size-2, block_size-2), 0)
+                pygame.draw.rect(surface, shape.color, (sx + j*block_size+20, sy + i*block_size+20, block_size-2, block_size-2), 0)
 
     surface.blit(label, (sx + 10, sy - 30))
 
@@ -277,18 +277,16 @@ def draw_window(surface, grid, score=0, last_score = 0):
     sx = top_left_x + play_width + 50
     sy = top_left_y + play_height/2 - 100
 
-    surface.blit(label, (sx + 20, sy + 160))
+    surface.blit(label, (10, sy*1.5))
     # high score
     label = font.render('High Score: ' + last_score, 1, (255,255,255))
 
-    sx = top_left_x - 200
-    sy = top_left_y + 200
-
-    surface.blit(label, (sx - 20, sy + 160))
+    surface.blit(label, (s_width-label.get_width()-10, sy*1.5))
 
     for i in range(len(grid)):
         for j in range(len(grid[i])):
-            pygame.draw.rect(surface, grid[i][j], (top_left_x + j*block_size, top_left_y + i*block_size, block_size, block_size), 0)
+            pygame.draw.rect(surface, grid[i][j], (550 + j*block_size, top_left_y + i*block_size, block_size, block_size), 0)
+            pygame.draw.rect(surface, grid[i][j], (150 + j * block_size, top_left_y + i * block_size, block_size, block_size), 0)
             
 
     pygame.draw.rect(surface, (255, 0, 0), (top_left_x, top_left_y, play_width, play_height), 5)
