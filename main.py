@@ -197,10 +197,11 @@ def draw_grid(surface, grid):
     sy = top_left_y
 
     for i in range(len(grid)):
-        pygame.draw.line(surface, (128,128,128), (sx, sy + i*block_size), (sx+play_width, sy+ i*block_size))
+        pygame.draw.line(surface, (128,128,128), (150, sy + i*block_size), (150+play_width, sy+ i*block_size))
+        pygame.draw.line(surface, (128, 128, 128), (550, sy + i * block_size), (550 + play_width, sy + i * block_size))
         for j in range(len(grid[i])):
-            pygame.draw.line(surface, (128, 128, 128), (sx + j*block_size, sy),(sx + j*block_size, sy + play_height))
-
+            pygame.draw.line(surface, (128, 128, 128), (150 + j*block_size, sy),(150 + j*block_size, sy + play_height))
+            pygame.draw.line(surface, (128, 128, 128), (550 + j * block_size, sy),(550 + j * block_size, sy + play_height))
 
 def clear_rows(grid, locked):
 
@@ -285,11 +286,12 @@ def draw_window(surface, grid, score=0, last_score = 0):
 
     for i in range(len(grid)):
         for j in range(len(grid[i])):
-            pygame.draw.rect(surface, grid[i][j], (550 + j*block_size, top_left_y + i*block_size, block_size, block_size), 0)
-            pygame.draw.rect(surface, grid[i][j], (150 + j * block_size, top_left_y + i * block_size, block_size, block_size), 0)
+            pygame.draw.rect(surface, grid[i][j], (150 + j*block_size, top_left_y + i*block_size, block_size, block_size), 0)
+            pygame.draw.rect(surface, grid[i][j], (550 + j * block_size, top_left_y + i * block_size, block_size, block_size), 0)
             
 
-    pygame.draw.rect(surface, (255, 0, 0), (top_left_x, top_left_y, play_width, play_height), 5)
+    pygame.draw.rect(surface, (255, 0, 0), (150, top_left_y, play_width, play_height), 5)
+    pygame.draw.rect(surface, (255, 0, 0), (550, top_left_y, play_width, play_height), 5)
 
     draw_grid(surface, grid)
     # pygame.display.update()
