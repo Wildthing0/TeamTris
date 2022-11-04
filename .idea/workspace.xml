@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e137cf6-8226-4a5d-b665-585cdf0feea7" name="Changes" comment="General bug fixing and made text look better in start menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <list id="a4e38bd9-26bb-4a50-b9ef-fc105db799fd" name="Changes by varda" comment="Changes by varda" />
     <option name="SHOW_DIALOG" value="false" />

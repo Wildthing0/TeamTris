@@ -355,10 +355,25 @@ def main(win):  # *
                     current_piece.y += 1
                     if not (valid_space(current_piece, grid)):
                         current_piece.y -= 1
-                if event.key == pygame.K_UP:
+                if event.key == pygame.K_z:
+                    current_piece.rotation -= 1
+                    if not (valid_space(current_piece, grid)):
+                        if not (valid_space(current_piece, grid)):
+                            current_piece.x -= 1
+                            if not (valid_space(current_piece, grid)):
+                                current_piece.x += 2
+                                if not (valid_space(current_piece, grid)):
+                                    current_piece.rotation += 1
+                                    current_piece.x -= 1
+                if event.key == pygame.K_x:
                     current_piece.rotation += 1
                     if not (valid_space(current_piece, grid)):
-                        current_piece.rotation -= 1
+                        current_piece.x -= 1
+                        if not (valid_space(current_piece, grid)):
+                            current_piece.x += 2
+                            if not (valid_space(current_piece, grid)):
+                                current_piece.rotation -= 1
+                                current_piece.x -= 1
                 if event.key == pygame.K_SPACE:
                     for i in range(20):
                         current_piece.y += 1
