@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e137cf6-8226-4a5d-b665-585cdf0feea7" name="Changes" comment="General bug fixing and made text look better in start menu">
+    <list default="true" id="2e137cf6-8226-4a5d-b665-585cdf0feea7" name="Changes" comment="made  basic kick system and rotation for both ways moved to player 2 with z&amp;x (left) while movement is player 1 with arrow keys (right)&#10;you can still hard drop with space">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <list id="a4e38bd9-26bb-4a50-b9ef-fc105db799fd" name="Changes by varda" comment="Changes by varda" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666654212100</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="made  basic kick system and rotation for both ways moved to player 2 with z&amp;x (left) while movement is player 1 with arrow keys (right)&#10;you can still hard drop with space">
+      <created>1667533138239</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667533138239</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +120,7 @@
     <MESSAGE value="Made font better" />
     <MESSAGE value="Made window title 'TeamTris' instead of 'Tetris'" />
     <MESSAGE value="Made Blocks start to fall faster at 200 points (20 lines) fall_speed = starting_speed/(score/200) which means that 400 points is double speed 600 is triple and everything in between" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Blocks start to fall faster at 200 points (20 lines) fall_speed = starting_speed/(score/200) which means that 400 points is double speed 600 is triple and everything in between" />
+    <MESSAGE value="made  basic kick system and rotation for both ways moved to player 2 with z&amp;x (left) while movement is player 1 with arrow keys (right)&#10;you can still hard drop with space" />
+    <option name="LAST_COMMIT_MESSAGE" value="made  basic kick system and rotation for both ways moved to player 2 with z&amp;x (left) while movement is player 1 with arrow keys (right)&#10;you can still hard drop with space" />
   </component>
 </project>

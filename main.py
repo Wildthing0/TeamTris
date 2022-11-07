@@ -324,6 +324,8 @@ def main(win):  # *
         fall_time += clock.get_rawtime()
         level_time += clock.get_rawtime()
         clock.tick()
+        if current_piece.y < 2:
+            current_piece.y += 1
 
         if level_time / 1000 > 5:
             level_time = 0
