@@ -332,12 +332,6 @@ def main(win):  # *
             if level_time > 0.12:
                 level_time -= 0.005
 
-        if fall_time / 1000 > fall_speed:
-            fall_time = 0
-            current_piece.y += 1
-            if not (valid_space(current_piece, grid)) and current_piece.y > 0:
-                current_piece.y -= 1
-                change_piece = True
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -383,6 +377,12 @@ def main(win):  # *
                             current_piece.y -= 1
 
         shape_pos = convert_shape_format(current_piece)
+        if fall_time / 1000 > fall_speed:
+            fall_time = 0
+            current_piece.y += 1
+            if not (valid_space(current_piece, grid)) and current_piece.y > 0:
+                current_piece.y -= 1
+                change_piece = True
 
         for i in range(len(shape_pos)):
             x, y = shape_pos[i]
