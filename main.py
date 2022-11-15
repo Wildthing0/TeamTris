@@ -409,6 +409,8 @@ def main(win):  # *
             pygame.display.update()
             pygame.time.delay(5000)
             run = False
+            for event in pygame.event.get():
+                True
             update_score(score)
 
 
